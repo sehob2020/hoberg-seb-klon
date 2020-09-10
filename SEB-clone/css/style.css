@@ -1,0 +1,229 @@
+
+@font-face{
+    font-family: 'SEB Regular';
+    src: url('../fonts/SEBSansSerif-Regular.woff2')
+}
+
+@font-face{
+    font-family: 'SEB Thin';
+    src: url('../fonts/SEBSansSerif-Light.woff2')
+}
+
+@font-face{
+    font-family: 'SEB Bold';
+    src: url('../fonts/SEBSansSerif-Bold.woff2')
+}
+
+/* Root Vars */
+
+:root{
+    /* Colors */
+    --primary-color: #333;
+    --white-color: #ffffff;
+    --blue-color: rgb(56, 128, 223);
+    /* Height */
+    --header-height: 6rem;
+    --view-height: 100vh;
+    --sub-links-height: 6rem;
+}
+
+/* Reset */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+ul{
+    list-style: none;
+}
+
+/* Utilities */
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+}
+
+.btn{
+    background: var(--blue-color);
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+/* Main Navigation */
+
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    height: var(--header-height);
+    width: 100%;
+    font-family: 'SEB Regular';
+    font-size: 1.1rem;
+    background: var(--white-color);
+    z-index: 10;
+}
+
+/* Navigation */
+
+.navigation{
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.logo{
+    width: 96px;
+}
+
+.menu{
+    display: flex;
+    height: 100%;
+}
+
+.menu-item{
+    height: 100%;
+}
+
+.menu-item-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Accessability */
+
+.accessibility-nav{
+    flex: 2;
+    height: 100%;
+}
+
+.access-menu{
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.access-menu-item{
+    height: 100%;
+    padding: 0 14px;
+}
+
+.access-menu-item-link{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: var(--primary-color);
+
+}
+
+.access-menu-item-link .fas,
+.access-menu-item-link .far{
+    margin-right: 8px;
+}
+
+/* Hero */
+
+.hero{
+    position: relative;
+    top: var(--header-height);
+    min-height: 600px;
+    height: calc(var(--view-height) - var(--header-height));
+    width: 100%;
+    background: url('https://seb.se/ImageVault/publishedmedia/j45aac5c0kbt6uhtdq4u/GettyImages-899419456-tusch.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: var(--white-color);
+    font-family: 'SEB Thin';
+}
+
+/* .hero::before{
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+ */
+
+.hero-content{
+    padding-top: 15%;
+}
+
+.hero-title{
+    font-size: 70px;
+    text-align: left;
+    margin-bottom: 40px;
+    z-index: 9;
+}
+
+.hero-text{
+    margin-bottom: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hero-link{
+    text-decoration: none;
+}
+
+.btn-showcase{
+    padding: 16px 30px;
+}
+
+/* Sub Links */
+
+.sub-links{
+    position: relative;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    height: var(--sub-links-height);
+    font-family: 'SEB Thin';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sub-links-menu{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sub-links-item{
+    padding: 0 20px;
+}
+
+.sub-links-link{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.sub-links-link :nth-child(2){
+    font-size: 0.9rem;
+}
